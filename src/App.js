@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import * as THREE from 'three'
+import React, { Suspense } from 'react';
+import Article from './Components/Article'
+import ModelViewer from './Components/ModelViewer'
+import Box from './Components/Box'
+import Model from './Components/Model'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        <Article />
+        <ModelViewer>
+          <Suspense fallback={<Box position={[1, 1, 1]} />}>
+            <Model url={'../Models/Books_01.gltf'} />
+          </Suspense>
+        </ModelViewer>
+      </main>
     </div>
   );
 }
