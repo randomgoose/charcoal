@@ -1,3 +1,8 @@
 canvas {
     background-color: #333;
 }
+
+.ModelViewer {
+    margin: 0 auto;
+    height: 800px;
+}
