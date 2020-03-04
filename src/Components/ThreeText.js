@@ -1,6 +1,6 @@
 import * as THREE from 'three'
-import React, { forwardRef, useMemo } from 'react'
-import { useLoader, useUpdate } from 'react-three-fiber'
+import React, { forwardRef, useMemo, useRef } from 'react'
+import { useLoader, useUpdate, useFrame} from 'react-three-fiber'
 
 const ThreeText = forwardRef(({ children, vAlign = 'center', hAlign = 'center', size = 1, color = '#000000', ...props }, ref) => {
   const font = useLoader(THREE.FontLoader, '/bold.json')
@@ -15,6 +15,7 @@ const ThreeText = forwardRef(({ children, vAlign = 'center', hAlign = 'center', 
     },
     [children]
   )
+
   return (
     <group ref={ref} {...props} scale={[0.1 * size, 0.1 * size, 0.1]}>
       <mesh ref={mesh} position={[0, 0, 10]}>

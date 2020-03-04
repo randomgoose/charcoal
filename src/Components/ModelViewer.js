@@ -1,9 +1,11 @@
 import React from 'react'
-import { Canvas, useCanvas } from 'react-three-fiber'
+import { Canvas, useCanvas, useThree } from 'react-three-fiber'
 import "./ModelViewer.css"
 import Draggable  from 'react-draggable'
 
 function ModelViewer(props) {
+    let aspect = window.innerWidth / window.innerHeight;
+    let d = 20;
 
     return (
         <div className="ModelViewer">
@@ -12,7 +14,6 @@ function ModelViewer(props) {
                 <pointLight position={[10, 10, 10]} />
                 { props.children }
             </Canvas>
-            <Draggable><div>Sam</div></Draggable>
         </div>
     )
 }

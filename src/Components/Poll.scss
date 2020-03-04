@@ -1,0 +1,123 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+}
+
+
+.Poll__card{
+        margin: 0 auto;
+        padding: 20px;
+        position: relative;
+        width: 50%;
+        background-color: #e4e4e4;
+}
+
+.Poll__card h3 {
+        margin: 16px;
+}
+
+.Poll__option{
+}
+
+.Poll__radio{
+	opacity: 0;
+}
+
+.Poll__label{
+        position: relative;
+	transition: all .2s;
+	margin-top: 50px;
+	display: inline-block;
+        font-family: sans-serif;
+        left: -125px;
+        top: -40px;
+        transform: translate(0);
+        text-align: left;
+	
+	&::before {
+		position: absolute;
+		border-radius: 4px;
+		content: "";
+		display: inline-block;
+		top: 0;
+		left: 0;
+		height: 40px;
+		width: 250px;
+		transition: all .2s;
+	}
+	
+	&::after{
+		position: absolute;
+		z-index: -1;
+		border-radius: 4px;
+		content: attr(value);
+		line-height: 40px;
+		padding-left: 10px;
+		top: 0;
+		left: 0;
+		display: inline-block;
+		height: 40px;
+		width: 250px;
+		background-color: white;
+		box-shadow: 0 1px 10px rgba(0, 0, 0, .1);
+		transition: all .2s;
+	}
+	
+	&:hover::before {
+		top: -2px;
+	}
+	
+	&:hover::after {
+		box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+		top: -2px;
+	}
+	
+	&:active::after {
+		top: -1px;
+	}
+	
+}
+
+.Poll__radio:checked + label::before{
+        
+	border: 2px solid #75daad;
+}
+
+.Poll__radio:checked + label::after{
+        color: #75daad;
+        font-weight: bold;
+}
+
+button {
+        margin: 20px auto;
+        background-color: darken(#75daad, 20%);
+        width: 200px;
+        height: 40px;
+        border-radius: 100px;
+        border: none;
+        color: white;
+        font-size: 16px;
+        transition: all 0.2s;
+        box-shadow: 1px 0 10px rgba(0, 0, 0, .1);
+        
+        &:hover {
+                transform: translateY(-2px);
+                box-shadow: 1px 5px 20px rgba(0, 0, 0, .2);
+        }
+
+        &:active{
+                transform: translateY(-1px);
+        }
+
+        &:focus {
+                outline: none;
+        }
+}
