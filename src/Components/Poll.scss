@@ -24,18 +24,15 @@ body {
         margin: 16px;
 }
 
-.Poll__option{
-}
-
 .Poll__radio{
 	opacity: 0;
 }
 
 .Poll__label{
         position: relative;
-	transition: all .2s;
-	margin-top: 50px;
-	display: inline-block;
+		transition: all .2s;
+		margin-top: 50px;
+		display: inline-block;
         font-family: sans-serif;
         left: -125px;
         top: -40px;
@@ -120,4 +117,10 @@ button {
         &:focus {
                 outline: none;
         }
+}
+
+.result::before {
+	background-color: #75daad;
+	width: 0px;
+	transition: all .5s;
 }
