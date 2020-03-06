@@ -46,7 +46,9 @@ function Article(props) {
     };
     
     let content = data[0].content.split("\n").map( item => (
-        <Highlight onMouseUp={set} key={Math.random()} search={search}>{item}</Highlight>
+        <Highlight onMouseUp={set} key={Math.random()} search={search}>
+            {item}
+        </Highlight>
     ))
             
     // useFrame( () => (console.log("ss")) )

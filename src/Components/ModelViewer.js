@@ -9,7 +9,7 @@ function ModelViewer(props) {
 
     return (
         <div className="ModelViewer">
-            <Canvas>
+            <Canvas orthographic={true} camera={{zoom: 300}}>
                 <ambientLight />
                 <pointLight position={[10, 10, 10]} />
                 { props.children }
@@ -19,3 +19,5 @@ function ModelViewer(props) {
 }
 
 export default ModelViewer
+
+// camera={{left: -d*aspect, right: d*aspect, top: d, bottom: -d, near: 0.1, far: 1000, position: [5, 5, 5], zoom: 10, lookAt: [0, 0, 0]}}

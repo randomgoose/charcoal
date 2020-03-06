@@ -10,7 +10,9 @@ import { BoxGeometry } from 'three';
 import Slot from './Components/Slot';
 import ARComponent from './Components/ARComponent';
 import SlotPanel from './Components/SlotPanel';
-
+import Graph from './/Components/Graph'
+import { Dom, Canvas } from 'react-three-fiber'
+ 
 function App() {
 
   let [topSlot, setTopSlot] = useState("")
@@ -42,15 +44,22 @@ function App() {
   return (
     <div className="App">
       <main>
-        {/* <Article /> */}
+        {/* <Article /> */} */}
         {/* <Sample /> */}
         {/* <div id="home" style={{width: "300px", height: "300px", backgroundColor: "purple", position: "absolute", left: "600px", zIndex: "-999"}}></div> */}
-        <SlotPanel />
-        <ARComponent content="iceberg" setBottomSlot={setBottomSlot} setLeftSlot={setLeftSlot} setRightSlot={setRightSlot} setTopSlot={setTopSlot}/>
-        <ARComponent content="pride" setBottomSlot={setBottomSlot} setLeftSlot={setLeftSlot} setRightSlot={setRightSlot} setTopSlot={setTopSlot}/>
+        {/* <SlotPanel /> */}
+        {/* <Article /> */}
+        {/* {/* <ARComponent content="iceberg" setBottomSlot={setBottomSlot} setLeftSlot={setLeftSlot} setRightSlot={setRightSlot} setTopSlot={setTopSlot}/> */}
+        {/* <ARComponent content="pride" setBottomSlot={setBottomSlot} setLeftSlot={setLeftSlot} setRightSlot={setRightSlot} setTopSlot={setTopSlot}/>
         <ARComponent content="tree" setBottomSlot={setBottomSlot} setLeftSlot={setLeftSlot} setRightSlot={setRightSlot} setTopSlot={setTopSlot}/>
         <ARComponent content="mountain" setBottomSlot={setBottomSlot} setLeftSlot={setLeftSlot} setRightSlot={setRightSlot} setTopSlot={setTopSlot}/>
-        <ARComponent content="python" setBottomSlot={setBottomSlot} setLeftSlot={setLeftSlot} setRightSlot={setRightSlot} setTopSlot={setTopSlot}/>
+        <ARComponent content="python" setBottomSlot={setBottomSlot} setLeftSlot={setLeftSlot} setRightSlot={setRightSlot} setTopSlot={setTopSlot}/> */}
+        <ModelViewer>
+          <Suspense fallback={null}>
+          <Graph id={0} />
+          </Suspense>
+        </ModelViewer>
+       
       </main>
     </div>
   );

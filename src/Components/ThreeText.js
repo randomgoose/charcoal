@@ -4,7 +4,7 @@ import { useLoader, useUpdate, useFrame} from 'react-three-fiber'
 
 const ThreeText = forwardRef(({ children, vAlign = 'center', hAlign = 'center', size = 1, color = '#000000', ...props }, ref) => {
   const font = useLoader(THREE.FontLoader, '/bold.json')
-  const config = useMemo(() => ({ font, size: 1, height: 1 }), [font])
+  const config = useMemo(() => ({ font, size: 1, height: .1 }), [font])
   const mesh = useUpdate(
     self => {
       const size = new THREE.Vector3()
@@ -18,7 +18,7 @@ const ThreeText = forwardRef(({ children, vAlign = 'center', hAlign = 'center', 
 
   return (
     <group ref={ref} {...props} scale={[0.1 * size, 0.1 * size, 0.1]}>
-      <mesh ref={mesh} position={[0, 0, 10]}>
+      <mesh ref={mesh} position={props.position} rotation={props.rotation}>
         <textGeometry attach="geometry" args={[children, config]} />
         <meshStandardMaterial attach="material" />
       </mesh>

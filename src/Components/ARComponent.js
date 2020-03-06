@@ -1,5 +1,7 @@
-import React, {useRef, useState, useEffect} from 'react'
+import React, {useRef, useState, useEffect, Suspense} from 'react'
 import Draggable from  'react-draggable'
+import ModelViewer from './ModelViewer'
+import Box from './Box'
 import './ARComponent.scss'
 
 function ARComponent(props) {
@@ -8,6 +10,8 @@ function ARComponent(props) {
 
         let [position, setPosition] = useState({x: 200, y: 200})
         let [content, setContent] = useState("")
+
+        let component = useRef(null);
 
         useEffect(() => {
                 Slots = Array.from(document.getElementsByClassName('Slot'))
@@ -62,8 +66,10 @@ function ARComponent(props) {
                                         break;
                                      default:
                                         console.log("Don't know!")
-
                              }
+
+                             console.log(component.current)
+
                      } else {
                                 
                      }
@@ -71,12 +77,16 @@ function ARComponent(props) {
         }
 
         return (
-                <Draggable position={position} onDrag={onControlledDrag} onStop={onStop}>
-                        <div className="ARComponent" style={{"backgroundColor": props.color}} >
-                                <p>{props.content}</p>
-                                <p>{"posX" + position.x}</p>
-                                <p>{"posY" + position.y}</p>
+                <Draggable position={position} onDrag={onControlledDrag} onStop={onStop} ref={component}>
+                        <div className="ARComponent">
+                                <ModelViewer>
+                                        <Suspense fallback={<Box position={[1, 1, 1]} />}>
+                                                <Box position={[1, 1, 1]} />
+                                        {/* <Card /> */}
+                                        </Suspense>
+                                </ModelViewer>
                         </div>
+                        
                 </Draggable>
         )
 }
