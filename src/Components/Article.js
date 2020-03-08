@@ -9,7 +9,20 @@ import axios from 'axios'
 import Card from './Card'
 import { Canvas, useFrame } from "react-three-fiber"
 import Poll from './Poll'
+import './Popup.scss'
 
+const Popup = (props) => {
+
+    const updatePosition = () => {
+
+    }
+
+    return(
+        <div className="Popup__background">
+            
+        </div>
+    )
+}
 
 function Article(props) {
     
@@ -55,7 +68,7 @@ function Article(props) {
     // useFrame(() => front.current.position.x += 0.01)
 
     return (
-        <>
+        <div className="Article__layout">
             <h1 className="Article__title">{data[0].title}</h1>
             <p className="Article__author">{data[0].author}</p>
             <Poll id={0}/>
@@ -68,7 +81,8 @@ function Article(props) {
                     {/* <Card /> */}
                 </Suspense>
             </ModelViewer>
-        </>
+            {/* <Popup event={}/> */}
+        </div>
     )
 
 }

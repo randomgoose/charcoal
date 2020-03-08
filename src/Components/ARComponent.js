@@ -10,6 +10,7 @@ function ARComponent(props) {
 
         let [position, setPosition] = useState({x: 200, y: 200})
         let [content, setContent] = useState("")
+        let [data, setData] = useState("")
 
         let component = useRef(null);
 
@@ -81,7 +82,7 @@ function ARComponent(props) {
                         <div className="ARComponent">
                                 <ModelViewer>
                                         <Suspense fallback={<Box position={[1, 1, 1]} />}>
-                                                <Box position={[1, 1, 1]} />
+                                                {props.children}
                                         {/* <Card /> */}
                                         </Suspense>
                                 </ModelViewer>

@@ -1,0 +1,13 @@
+@import 'node_modules/gel-sass-tools/sass-tools';
+@import 'node_modules/sass-mq/mq';
+@import 'node_modules/gel-typography/typography';
+
+@import 'node_modules/gel-sass-tools/sass-tools';
+@import 'node_modules/sass-mq/mq';
+@import 'node_modules/gel-grid/grid';
+
+
+.Article__layout {
+    position: relative;
+    text-align: center;
+}

@@ -1,6 +1,10 @@
-import React, {useState} from 'react'
+import React, {useState, Suspense} from 'react'
 import data from './PollData'
 import './Poll.scss'
+import Graph from './Graph'
+import ModelViewer from './ModelViewer';
+import Draggable from 'react-draggable';
+import ARComponent from './ARComponent';
 
 function Poll(props) {
         let [answered, setAnswered] = useState(false);
@@ -16,16 +20,10 @@ function Poll(props) {
                         <label className="Poll__label" htmlFor={option.description} value={option.description}></label>
                         <br />
                 </div>
-        )) : question[0].options.map(option => (
-                <div key={question[0].options.indexOf(option)} className="Poll__option">
-                        <input className="Poll__radio" key={question[0].options.indexOf(option)}
-                                id={option.description} type="radio"
-                                name="option"
-                                value={option.description}></input>
-                        <label className="Poll__label result" htmlFor={option.description} value={option.number+"px"}></label>
-                        <br />
-                </div>
-        ))
+        )) : (
+        <ARComponent><Graph id={props.id} /></ARComponent>
+                
+           )
 
         return ( 
                 <div className="Poll__card">

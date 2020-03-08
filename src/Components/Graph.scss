@@ -1,0 +1,17 @@
+.caption {
+    width: 190px;
+    color: white;
+    // transform: rotateY(90deg);
+    text-align: right;
+
+    &::after{
+        content: "";
+        width: 190px;
+        height: 1px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: white;
+    }
+}

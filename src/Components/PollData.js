@@ -14,14 +14,6 @@ const data = [
                         {
                                 description: "🤔Don't know...",
                                 number: 24
-                        },
-                        {
-                                description: "🤔Don't know...",
-                                number: 24
-                        },
-                        {
-                                description: "🤔Don't know...",
-                                number: 24
                         }
                 ]
         }

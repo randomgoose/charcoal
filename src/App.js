@@ -5,7 +5,7 @@ import ModelViewer from './Components/ModelViewer'
 import Box from './Components/Box'
 import ThreeText from './Components/ThreeText'
 import Model from './Components/Model'
-import './App.css';
+import './App.scss';
 import { BoxGeometry } from 'three';
 import Slot from './Components/Slot';
 import ARComponent from './Components/ARComponent';
@@ -54,11 +54,13 @@ function App() {
         <ARComponent content="tree" setBottomSlot={setBottomSlot} setLeftSlot={setLeftSlot} setRightSlot={setRightSlot} setTopSlot={setTopSlot}/>
         <ARComponent content="mountain" setBottomSlot={setBottomSlot} setLeftSlot={setLeftSlot} setRightSlot={setRightSlot} setTopSlot={setTopSlot}/>
         <ARComponent content="python" setBottomSlot={setBottomSlot} setLeftSlot={setLeftSlot} setRightSlot={setRightSlot} setTopSlot={setTopSlot}/> */}
-        <ModelViewer>
-          <Suspense fallback={null}>
+        {/* <ModelViewer> */}
+          <Article />
+          <SlotPanel />
+          {/* <Suspense fallback={null}>
           <Graph id={0} />
-          </Suspense>
-        </ModelViewer>
+          </Suspense> */}
+        {/* </ModelViewer> */}
        
       </main>
     </div>

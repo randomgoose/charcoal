@@ -3,5 +3,7 @@ canvas {
 }
 
 .ModelViewer {
-    height: 800px;
+    margin: 0 auto;
+    height: 300px;
+    width: 400px;
 }
