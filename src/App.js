@@ -10,7 +10,7 @@ import { BoxGeometry } from 'three';
 import Slot from './Components/Slot';
 import ARComponent from './Components/ARComponent';
 import SlotPanel from './Components/SlotPanel';
-import Graph from './/Components/Graph'
+import Graph from './Components/Graph'
 import { Dom, Canvas } from 'react-three-fiber'
  
 function App() {

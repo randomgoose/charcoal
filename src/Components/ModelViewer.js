@@ -1,22 +1,19 @@
 import React, { useRef, useEffect } from 'react'
 import { Canvas, useCanvas, useThree } from 'react-three-fiber'
 import "./ModelViewer.css"
-import Draggable  from 'react-draggable'
 
 function ModelViewer(props) {
 
     const modelViewer = useRef(null)
     
     return (
-        <Draggable onStart={(e) => console.log(e)}>
             <div ref={modelViewer} className="ModelViewer">
                 <Canvas orthographic={true} camera={{zoom: 300}}>
                     <ambientLight />
                     <pointLight position={[10, 10, 10]} />
                     { props.children }
                 </Canvas>
-            </div>
-        </Draggable>
+            </div> 
     )
 }
 

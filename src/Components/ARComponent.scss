@@ -1,0 +1,14 @@
+.ARComponent__shadow {
+        width: 300px;
+        height: 300px;
+        background-color: #333;
+}
+
+.clone {
+        display: block;
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        transition: all 0.5s;
+}
