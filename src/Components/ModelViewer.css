@@ -3,7 +3,10 @@ canvas {
 }
 
 .ModelViewer {
+    position: static;
     margin: 0 auto;
     height: 300px;
     width: 400px;
+    /* height: 1080px; */
+    /* width: 1920px; */
 }

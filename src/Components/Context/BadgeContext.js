@@ -16,36 +16,42 @@ class BadgeContextProvider extends React.Component {
                         document.getElementsByClassName("SlotPanel")[0].style.left = x - 200 + "px"
                         document.getElementsByClassName("SlotPanel")[0].style.top = y - 200 + "px"
                         document.getElementsByClassName("SlotPanel")[0].style.opacity = "1";
-                        // setTimeout(() => { document.getElementsByClassName("SlotPanel")[0].style.opacity = "0" }, 1000)
                 })
+                console.log(this.state.position)
         }
 
-        // updateSlot = (slotName, content) => {
-        //         var myHeaders = new Headers();
-        //         myHeaders.append("Content-Type", "application/json");
+        setSlot = (which, data) => {
+                const slotData = JSON.stringify({
+                        "which": which,
+                        "data": data
+                })
+                
+                console.log(slotData)
 
-        //         var raw = JSON.stringify({ "TOP": topSlot, "BOTTOM": bottomSlot, "LEFT": leftSlot, "RIGHT": rightSlot });
+                const headers = new Headers()
+                headers.append("Content-Type", "application/json")
 
-        //         var requestOptions = {
-        //                 method: 'POST',
-        //                 headers: myHeaders,
-        //                 body: raw,
-        //                 redirect: 'follow'
-        //         };
+                const requestOptions = {
+                        method: 'POST',
+                        headers: headers,
+                        body: slotData,
+                        redirect: 'follow'
+                }
 
-        //         fetch("http://t-9.tools:5000/slots", requestOptions)
-        //                 .then(response => response.text())
-        //                 .then(result => console.log(result))
-        //                 .catch(error => console.log('error', error));
-        //         return () => {
-        //         };
-        // }
+                fetch("http://t-9.tools:5000/slots", requestOptions)
+                        .then(response => response.text())
+                        .then(result => console.log(result))
+                        .catch(error => console.log('error', error));
+                return () => {
+                };
+        }
 
         render() {
                 return (
                         <BadgeContext.Provider value={{
                                 position: this.state.position,
-                                updatePosition: this.updatePosition
+                                updatePosition: this.updatePosition,
+                                setSlot: this.setSlot
                         }}>
                                 {this.props.children}
                         </BadgeContext.Provider>

@@ -21,7 +21,7 @@ function Poll(props) {
                         <br />
                 </div>
         )) : (
-        <ARComponent><Graph id={props.id} /></ARComponent>
+        <ARComponent data={{type: "poll", content: question}}><Graph id={props.id} /></ARComponent>
                 
            )
 

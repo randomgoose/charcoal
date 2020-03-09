@@ -12,6 +12,7 @@ import ARComponent from './Components/ARComponent';
 import SlotPanel from './Components/SlotPanel';
 import Graph from './Components/Graph'
 import { Dom, Canvas } from 'react-three-fiber'
+import Demo from './Components/Demo';
  
 function App() {
 
@@ -44,7 +45,7 @@ function App() {
   return (
     <div className="App">
       <main>
-        {/* <Article /> */} */}
+        {/* <Article /> */} 
         {/* <Sample /> */}
         {/* <div id="home" style={{width: "300px", height: "300px", backgroundColor: "purple", position: "absolute", left: "600px", zIndex: "-999"}}></div> */}
         {/* <SlotPanel /> */}
@@ -55,13 +56,19 @@ function App() {
         <ARComponent content="mountain" setBottomSlot={setBottomSlot} setLeftSlot={setLeftSlot} setRightSlot={setRightSlot} setTopSlot={setTopSlot}/>
         <ARComponent content="python" setBottomSlot={setBottomSlot} setLeftSlot={setLeftSlot} setRightSlot={setRightSlot} setTopSlot={setTopSlot}/> */}
         {/* <ModelViewer> */}
-          <Article />
-          <SlotPanel />
+          {/* <Article />
+          <SlotPanel /> */}
           {/* <Suspense fallback={null}>
           <Graph id={0} />
           </Suspense> */}
         {/* </ModelViewer> */}
-       
+          <Demo />
+          <SlotPanel />
+          {/* <ModelViewer>
+            <Suspense fallback={null}>
+              <Model />
+            </Suspense> 
+          </ModelViewer> */}
       </main>
     </div>
   );

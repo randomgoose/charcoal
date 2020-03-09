@@ -28,29 +28,6 @@ function Article(props) {
     
     const [search, setSearch] = useState("ipsam")
 
-    const front = useRef(null)
-
-    useEffect(() => {   
-        console.log(front.current)
-        var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-
-        var raw = JSON.stringify({"content": search});
-
-        var requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        body: raw,
-        redirect: 'follow'
-        };
-
-        fetch("http://t-9.tools:5000/message", requestOptions)
-        .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
-        return () => {
-        };
-    }, [search])
 
     const set = () => {
         setSearch(

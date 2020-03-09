@@ -26,9 +26,10 @@ function Bar(props) {
                                 key={props.index}
                                 position={[0 + props.index * 1 * 0.2, currentValue / 2 * 0.1 * 0.1, 1]}
                                 scale={[1, currentValue * 0.1, 1]}
-                                onClick={e => console.log()}
-                                onPointerOver={e => setHover(true)}
-                                onPointerOut={e => setHover(false)}>
+                                // onClick={e => console.log()}
+                                // onPointerOver={e => setHover(true)}
+                                // onPointerOut={e => setHover(false)}>
+                                >
                                 <Dom>
                                 <div className="caption">{`${props.description } (${props.value})`}</div>        
                                 </Dom>                                        

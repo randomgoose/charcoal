@@ -1,11 +1,16 @@
 import React, {useEffect} from 'react'
 import { useFrame, useLoader, useThree } from 'react-three-fiber'
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader'
-import object from './words.fbx'
+import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
+import { MTLLoader} from 'three/examples/jsm/loaders/MTLLoader'
+import object from '../Models/snow.obj'
+import material from '../Models/snow.mtl'
+import { Camera } from 'three'
 
 function Model(props) {
 
-  const obj = useLoader(FBXLoader, object)
+  const obj = useLoader(OBJLoader, object)
+  const mat = useLoader(MTLLoader, material)
+  
 
   const {
     gl,                           // WebGL renderer
@@ -21,13 +26,17 @@ function Model(props) {
     setDefaultCamera,             // Sets the default camera
   } = useThree()
 
+  gl.setSize(600, 400)
+  useEffect(() => {
+    camera.position.set(20, 20, 20);
+    camera.lookAt(0, 0, 0);
+  })
+  // camera.lookAt(0, 0, 0)
 
-
-  gl.setSize(480, 480)
-
-  obj.scale.set(0.2, 0.2, 0.2)
+  obj.scale.set(0.01, 0.01, 0.01)
   obj.position.set(0, 0, 0)
   // useFrame(() => (obj.rotation.x = obj.rotation.y += 0.01))
+  console.log(mat)
 
   return (
       <primitive object = {obj} />
