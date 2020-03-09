@@ -69,6 +69,7 @@ function App() {
               <Model />
             </Suspense> 
           </ModelViewer> */}
+          {/* <Header /> */}
       </main>
     </div>
   );

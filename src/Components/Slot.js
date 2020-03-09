@@ -10,8 +10,7 @@ const Slot = (props) => {
         }
 
         return (
-            <div id={props.position} className={`Slot ${props.position}`} ref={slot} onClick={e => console.log(e.target.getBoundingClientRect().bottom) }>
-                
+            <div id={props.position} className={`Slot ${props.position}`} ref={slot} onClick={e => console.log(e.target.getBoundingClientRect().bottom) }> 
             </div>
         )
 }

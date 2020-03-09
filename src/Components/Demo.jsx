@@ -7,6 +7,8 @@ import ModelViewer from './ModelViewer'
 import Model from './Model'
 import ThreeText from './ThreeText'
 import Poll from './Poll'
+import Slot from './Slot'
+import SlotPanel from './SlotPanel'
 
 const Demo = (props) => {
 
@@ -52,6 +54,8 @@ const Demo = (props) => {
             <div className="Article__spacing"></div>
             {/* <div className="Article__paragraph">t</div> */}
         </div>
+
+        <div id="evil">s</div>
 
         <Poll id={0}></Poll>
 

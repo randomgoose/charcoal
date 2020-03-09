@@ -37,10 +37,12 @@ function ARComponent(props) {
                 const {x, y} = position
                 setPosition({x, y})
 
-                let componentClientRect = e.target.getBoundingClientRect()
+                let componentClientRect = component.current.getBoundingClientRect()
+                let clone = document.getElementsByClassName("clone")[0]
 
-                document.getElementsByClassName("clone")[0].style.top = componentClientRect.top + "px";
-                document.getElementsByClassName("clone")[0].style.left = componentClientRect.left + "px";
+                clone.style.top = e.screenY - clone.getBoundingClientRect().height - clone.getBoundingClientRect().height / 2 + "px";
+                clone.style.left = e.screenX - clone.getBoundingClientRect().width / 2 + "px";
+        
 
                 let cloneClientRect = document.getElementsByClassName("clone")[0].getBoundingClientRect()
 
@@ -51,19 +53,25 @@ function ARComponent(props) {
                      if (!nonIntersect)  {
                              slot.style.width = "5.5rem"
                              slot.style.height = "5.5rem"
+                             
+                             slot.setAttribute("class", slot.getAttribute('class').split(" ")[0] + " " + slot.getAttribute('class').split(" ")[1] + " " + props.data.type)
                                 // slot.style.transform = slot.style.transform.replace("scale(1)", "scale(1.1)")
                      } else {
                                 slot.style.width = "5rem"
                                 slot.style.height = "5rem"
+                                console.log(slot.getAttribute('class'))
+                                if (slot.getAttribute("class").split(" ").length === 2) {
+                                        console.log("yell", slot.getAttribute('class').split(" ")[0] + " " + slot.getAttribute('class').split(" ")[1])
+                                        slot.setAttribute("class", slot.getAttribute('class').split(" ")[0] + " " + slot.getAttribute('class').split(" ")[1])
+                                } 
+                                //         slot.setAttribute("class", slot.getAttribute('class'))
+                                // }
                         // slot.style.transform = "scale(1)"
                             
                                 // slot.style.transform = slot.style.transform.replace("scale(1.1)", "scale(1)")
                      }
                 });
 
-
-               
-                console.log(componentClientRect.left, componentClientRect.top)
               };
         
         const onStop = (e, position) => {
@@ -93,7 +101,7 @@ function ARComponent(props) {
                                      default:
                                         console.log("Don't know!")
                              }
-
+                             slot.setAttribute("class", slot.getAttribute('class').split(" ")[0] + " " + slot.getAttribute('class').split(" ")[1] + " " + props.data.type)
                      } else {
                         document.getElementsByClassName("SlotPanel")[0].style.opacity = "0";
                      }
@@ -109,6 +117,7 @@ function ARComponent(props) {
                 let clone = document.createElement("div")
                 clone.setAttribute("class", `clone ${props.data.type}`);
                 document.getElementsByTagName('body')[0].appendChild(clone);
+                // document.getElementsByTagName('body')[0].appendChild(clone);
 
                 let client = component.current.getBoundingClientRect()
                 console.log(client)
