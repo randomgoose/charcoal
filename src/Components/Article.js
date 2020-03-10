@@ -54,7 +54,7 @@ function Article(props) {
             <ModelViewer>
                 <Suspense fallback={<Box position={[1, 1, 1]} />}>
                     <ThreeText>{search.length <= 35 ? search : search.slice(0, 35) + "..."}</ThreeText>
-                    <Box position={[1, 1, 1]} />
+                    <Box position={[0, 0, 0]} />
                     {/* <Card /> */}
                 </Suspense>
             </ModelViewer>

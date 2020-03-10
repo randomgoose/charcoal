@@ -2,7 +2,8 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    animation: appear .2s ease;
+    // animation: appear .2s ease;
+    transition: opacity 0.2s;
 }
 
 .ARComponent.poll {

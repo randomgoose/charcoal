@@ -9,6 +9,7 @@ import ThreeText from './ThreeText'
 import Poll from './Poll'
 import Slot from './Slot'
 import SlotPanel from './SlotPanel'
+import Card from './Card'
 
 const Demo = (props) => {
 
@@ -55,8 +56,6 @@ const Demo = (props) => {
             {/* <div className="Article__paragraph">t</div> */}
         </div>
 
-        <div id="evil">s</div>
-
         <Poll id={0}></Poll>
 
         <ARComponent x={x} y={y} data={{
@@ -64,7 +63,7 @@ const Demo = (props) => {
             content: search
         }}>
                         <ThreeText>{search.length <= 35 ? search : search.slice(0, 35) + "..."}</ThreeText>
-                        {/* <Card /> */}
+                        <Card />
         </ARComponent>
 
 

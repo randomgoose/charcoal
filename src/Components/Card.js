@@ -7,16 +7,16 @@ function Card() {
         const back = useRef(null)
 
         return(
-                <THREE.Group>
+                <group>
                         <mesh ref={front}>
-                                <boxBufferGeometry attach="geometry" args={[2, 2, 0.1]}/>
-                                <meshPhongMaterial attach="material" color={"red"}></meshPhongMaterial>
+                                <boxBufferGeometry attach="geometry" args={[.8, .8, 0.1]}/>
+                                <meshPhysicalMaterial attach="material" metalness={0} transparent={true} opacity={.5}></meshPhysicalMaterial>
                         </mesh>
-                        <mesh ref={back} position={[-1, -1, -1 ]}>
-                                <boxBufferGeometry attach="geometry" args={[2, 2, 0.1]}/>
+                        <mesh ref={back} position={[-.1, .05, -.1 ]}>
+                                <boxBufferGeometry attach="geometry" args={[.8, .8, 0.1]}/>
                                 <meshPhongMaterial attach="material" color={"blue"}></meshPhongMaterial>
                         </mesh>
-                </THREE.Group>
+                </group>
         )
 }
 

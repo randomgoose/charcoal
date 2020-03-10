@@ -28,7 +28,7 @@ function Box(props) {
     setDefaultCamera,             // Sets the default camera
   } = useThree()
 
-  gl.setSize(720, 720)
+  // gl.setSize(720, 720)
   
   return (
     <mesh

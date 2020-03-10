@@ -54,16 +54,16 @@ function ARComponent(props) {
                              slot.style.width = "5.5rem"
                              slot.style.height = "5.5rem"
                              
-                             slot.setAttribute("class", slot.getAttribute('class').split(" ")[0] + " " + slot.getAttribute('class').split(" ")[1] + " " + props.data.type)
+                        //      slot.setAttribute("class", slot.getAttribute('class').split(" ")[0] + " " + slot.getAttribute('class').split(" ")[1] + " " + props.data.type)
                                 // slot.style.transform = slot.style.transform.replace("scale(1)", "scale(1.1)")
                      } else {
                                 slot.style.width = "5rem"
                                 slot.style.height = "5rem"
-                                console.log(slot.getAttribute('class'))
-                                if (slot.getAttribute("class").split(" ").length === 2) {
-                                        console.log("yell", slot.getAttribute('class').split(" ")[0] + " " + slot.getAttribute('class').split(" ")[1])
-                                        slot.setAttribute("class", slot.getAttribute('class').split(" ")[0] + " " + slot.getAttribute('class').split(" ")[1])
-                                } 
+                                // console.log(slot.getAttribute('class'))
+                                // if (slot.getAttribute("class").split(" ").length === 2) {
+                                        // console.log("yell", slot.getAttribute('class').split(" ")[0] + " " + slot.getAttribute('class').split(" ")[1])
+                                        // slot.setAttribute("class", slot.getAttribute('class').split(" ")[0] + " " + slot.getAttribute('class').split(" ")[1])
+                                // } 
                                 //         slot.setAttribute("class", slot.getAttribute('class'))
                                 // }
                         // slot.style.transform = "scale(1)"
@@ -77,14 +77,14 @@ function ARComponent(props) {
         const onStop = (e, position) => {
                 // let componentClientRect = e.target.getBoundingClientRect()
                 let componentClientRect = document.getElementsByClassName("clone")[0].getBoundingClientRect()
-                console.log(componentClientRect)
+                // console.log(componentClientRect)
 
                 Slots.forEach(slot => {
                      let slotClientRect = slot.getBoundingClientRect()
                      let nonIntersect = (slotClientRect.right < componentClientRect.left) || (slotClientRect.bottom < componentClientRect.top) || (componentClientRect.right < slotClientRect.left) || (componentClientRect.bottom < slotClientRect.top) 
 
                      if (!nonIntersect)  {
-                             console.log(data)
+                        //      console.log(data)
                              switch(slot.id) {
                                      case "bottom":
                                         context.setSlot('bottom', data)
@@ -101,7 +101,8 @@ function ARComponent(props) {
                                      default:
                                         console.log("Don't know!")
                              }
-                             slot.setAttribute("class", slot.getAttribute('class').split(" ")[0] + " " + slot.getAttribute('class').split(" ")[1] + " " + props.data.type)
+                        //      component.current.style.opacity = 0;
+                        //      slot.setAttribute("class", slot.getAttribute('class').split(" ")[0] + " " + slot.getAttribute('class').split(" ")[1] + " " + props.data.type)
                      } else {
                         document.getElementsByClassName("SlotPanel")[0].style.opacity = "0";
                      }
@@ -109,6 +110,8 @@ function ARComponent(props) {
 
                 component.current.style.opacity = "1"; 
                 document.getElementsByTagName("body")[0].removeChild(document.getElementsByClassName("clone")[0])
+
+                context.updatePosition(-9999, -9999) 
                 
                 // component.current.style.transform = "translate(0, 0)"
         }
@@ -120,7 +123,7 @@ function ARComponent(props) {
                 // document.getElementsByTagName('body')[0].appendChild(clone);
 
                 let client = component.current.getBoundingClientRect()
-                console.log(client)
+                // console.log(client)
                 context.updatePosition(client.x, client.y) 
                 
                 document.getElementsByClassName("clone")[0].style.width = "5rem";
