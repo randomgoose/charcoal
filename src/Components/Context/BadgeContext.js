@@ -14,6 +14,7 @@ class BadgeContextProvider extends React.Component {
                 }
         }
 
+
         updatePosition = (x, y) => {
                 this.setState({
                         x, y

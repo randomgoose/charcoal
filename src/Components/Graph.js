@@ -10,13 +10,18 @@ function Bar(props) {
         let [currentValue, setCurrentValue] = useState(1)
 
         let bar = useRef()
+       
         const [hovered, setHover] = useState(false)
         
+        useEffect(() => {
+                // group.current.position.set(0, 0, 0)
+        })
 
         useFrame(state => {
                 if (currentValue < props.value) {
                         setCurrentValue(currentValue += 0.5)
                 }
+                console.log(bar.current.position)
         })
 
         return (
@@ -45,6 +50,8 @@ function Graph(props) {
         let [myMouseX, setMyMouseX] = useState(0)
         let [myMouseY, setMyMouseY] = useState(0)
 
+        const group = useRef()
+
         const question = data.filter(item => item.id === props.id)[0]
         const values = question.options.map(item => (
                 <Bar index={question.options.indexOf(item)} value={item.number} description={item.description}/>
@@ -54,9 +61,14 @@ function Graph(props) {
                 camera
         } = useThree()
 
+        useFrame(state => {
+                console.log(group.current.rotation.y += 0.01)
+        })
+
         useEffect(() => {
                 camera.position.set(20, 20, 20);
                 camera.lookAt(0, 0, 0.5);
+                // group.current.position.set(0.2, 0.1  , 1)
                 // camera.rotation.order = 'YXZ';
                 // camera.rotation.y = - Math.PI / 4;
                 // camera.rotation.x = Math.atan(- 1 / Math.sqrt(2));
@@ -64,8 +76,7 @@ function Graph(props) {
 
 
         return (
-                <group>
-                        
+                <group  ref={group}> 
                         {values}
                 </group>
 

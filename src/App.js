@@ -13,6 +13,9 @@ import SlotPanel from './Components/SlotPanel';
 import Graph from './Components/Graph'
 import { Dom, Canvas } from 'react-three-fiber'
 import Demo from './Components/Demo';
+import { Switch, Route, Link } from 'react-router-dom'
+import Profile from './Components/Pages/Profile'
+import Male from './Components/Male'
  
 function App() {
 
@@ -44,7 +47,10 @@ function App() {
 
   return (
     <div className="App">
+      {/* <Link to="/">Home</Link>
+        <Link to="/profile">Profile</Link> */}
       <main>
+        
         {/* <Article /> */} 
         {/* <Sample /> */}
         {/* <div id="home" style={{width: "300px", height: "300px", backgroundColor: "purple", position: "absolute", left: "600px", zIndex: "-999"}}></div> */}
@@ -62,14 +68,27 @@ function App() {
           <Graph id={0} />
           </Suspense> */}
         {/* </ModelViewer> */}
-          <Demo />
-          <SlotPanel />
+        {/* <Switch>
+          <Route exact path="/">
+            <Demo />
+            <SlotPanel />
+          </Route>
+          <Route path="/profile">
+            <Profile />
+          </Route>
+        </Switch> */}
+          
           {/* <ModelViewer>
             <Suspense fallback={null}>
               <Model />
             </Suspense> 
           </ModelViewer> */}
           {/* <Header /> */}
+          <ModelViewer>
+            <Suspense fallback={null}>
+              <Model />
+            </Suspense>
+          </ModelViewer>
       </main>
     </div>
   );

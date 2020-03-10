@@ -4,14 +4,14 @@ import Badge from './Badge'
 import './SlotPanel.scss'
 import { BadgeContext } from './Context/BadgeContext'
 
-const SlotPanel = (props) => {
+const SlotPanel = React.forwardRef((props, ref) => {
 
     const context = useContext(BadgeContext)
 
     const [show, setShow] = useState(false)
 
     return (
-        <div className="SlotPanel">
+        <div className="SlotPanel" ref={ref}>
             <Badge />
             <Slot position="top"></Slot>
             <Slot position="bottom"></Slot>
@@ -20,6 +20,6 @@ const SlotPanel = (props) => {
         </div>  
     )
 
-}
+})
 
 export default SlotPanel

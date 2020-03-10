@@ -1,45 +1,50 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useMemo, useRef} from 'react'
 import { useFrame, useLoader, useThree } from 'react-three-fiber'
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
+import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader'
 import { MTLLoader} from 'three/examples/jsm/loaders/MTLLoader'
-import object from '../Models/snow.obj'
-import material from '../Models/snow.mtl'
-import { Camera } from 'three'
+import object from '../Models/male.fbx'
+import * as THREE from 'three'
 
 function Model(props) {
+  const model = useRef(null)
 
-  const obj = useLoader(OBJLoader, object)
-  const mat = useLoader(MTLLoader, material)
+  const obj = useLoader(FBXLoader, object)
+  const mixer = useMemo(() => new THREE.AnimationMixer(), [])
   
+  useFrame((state, delta) => {
+      mixer.update(delta)
+    })
+  
+  // console.log(obj.animations)
+
+  useEffect(() =>{
+    camera.position.set(20, 20, 20);
+    camera.lookAt(0, 0, 0);
+    mixer.clipAction(obj.animations[0], model.current).play()
+
+    return () => {
+      obj.animations.forEach(clip => {
+        mixer.uncacheClip(clip)
+        console.log(clip)
+      })
+    }
+  }, [])
 
   const {
-    gl,                           // WebGL renderer
-    scene,                        // Default scene
-    camera,                       // Default camera
-    size,                         // Bounds of the view (which stretches 100% and auto-adjusts)
-    viewport,                     // Bounds of the viewport in 3d units + factor (size/viewport)
-    aspect,                       // Aspect ratio (size.width / size.height)
-    mouse,                        // Current 2D mouse coordinates
-    clock,                        // THREE.Clock (useful for useFrame deltas)
-    invalidate,                   // Invalidates a single frame (for <Canvas invalidateFrameloop />)
-    intersect,                    // Calls onMouseMove handlers for objects underneath the cursor
-    setDefaultCamera,             // Sets the default camera
+    gl,                       
+    camera
   } = useThree()
 
   gl.setSize(600, 400)
-  useEffect(() => {
-    camera.position.set(20, 20, 20);
-    camera.lookAt(0, 0, 0);
-  })
-  // camera.lookAt(0, 0, 0)
 
-  obj.scale.set(0.01, 0.01, 0.01)
+  obj.scale.set(0.01/10, 0.01/10, 0.01/10)
   obj.position.set(0, 0, 0)
   // useFrame(() => (obj.rotation.x = obj.rotation.y += 0.01))
-  console.log(mat)
 
   return (
-      <primitive object = {obj} />
+    <group ref={model}>
+      <primitive object={obj} />
+    </group>
   )
 
 }

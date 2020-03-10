@@ -9,7 +9,7 @@ function ModelViewer(props) {
     return (
             <div ref={modelViewer} className="ModelViewer">
                 <Canvas orthographic={true} camera={{zoom: 300}}>
-                    <ambientLight />
+                    <ambientLight castShadow={true} />
                     <pointLight position={[10, 10, 10]} />
                     { props.children }
                 </Canvas>

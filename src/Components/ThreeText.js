@@ -1,6 +1,8 @@
 import * as THREE from 'three'
-import React, { forwardRef, useMemo, useRef } from 'react'
-import { useLoader, useUpdate, useFrame} from 'react-three-fiber'
+import React, { forwardRef, useMemo, useRef, useEffect } from 'react'
+import { useLoader, useUpdate, useFrame, useThree} from 'react-three-fiber'
+
+
 
 const ThreeText = forwardRef(({ children, vAlign = 'center', hAlign = 'center', size = 1, color = '#000000', ...props }, ref) => {
   const font = useLoader(THREE.FontLoader, '/bold.json')
@@ -15,6 +17,18 @@ const ThreeText = forwardRef(({ children, vAlign = 'center', hAlign = 'center', 
     },
     [children]
   )
+
+  const {
+    camera
+} = useThree()
+
+useEffect(() => {
+    camera.position.set(20, 20, 20);
+    camera.lookAt(0, 0, 0.5);
+    // camera.rotation.order = 'YXZ';
+    // camera.rotation.y = - Math.PI / 4;
+    // camera.rotation.x = Math.atan(- 1 / Math.sqrt(2));
+}, [])
 
   return (
     <group ref={ref} {...props} scale={[0.05 * size, 0.05 * size, 0.05]}>
