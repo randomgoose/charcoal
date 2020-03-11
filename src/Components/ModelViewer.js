@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import { Canvas, useCanvas, useThree } from 'react-three-fiber'
-import "./ModelViewer.css"
+import "./ModelViewer.scss"
 
 function ModelViewer(props) {
 

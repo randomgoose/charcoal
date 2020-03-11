@@ -1,6 +1,9 @@
-import React, { useRef, useEffect } from 'react'
-// import { Menu, updatePosition } from '../Menu'
+import React, { useRef, useEffect, Suspense } from 'react'
+import { Canvas } from 'react-three-fiber'
+import { Menu, updatePosition } from '../Menu'
 import SlotPanel from '../SlotPanel'
+import ModelViewer from '../ModelViewer'
+import Model from '../Model'
 
 const Profile = (props) => {
         const slotPanel = useRef(null)
@@ -13,10 +16,16 @@ const Profile = (props) => {
 
         return(
                 <div className="Profile">
-                        <SlotPanel ref={slotPanel}>
-                                
+                        <SlotPanel ref={slotPanel} clickable={true}>
                         </SlotPanel>
-                        {/* <Menu /> */}
+                        <Menu />
+                        <Canvas>
+                                <ambientLight castShadow={true} />
+                                <pointLight position={[10, 10, 10]} />
+                                <Suspense fallback={null}>
+                                        <Model />
+                                </Suspense>
+                        </Canvas>
                 </div>
         )
 }

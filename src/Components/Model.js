@@ -14,8 +14,6 @@ function Model(props) {
   useFrame((state, delta) => {
       mixer.update(delta)
     })
-  
-  // console.log(obj.animations)
 
   useEffect(() =>{
     camera.position.set(20, 20, 20);
@@ -35,15 +33,15 @@ function Model(props) {
     camera
   } = useThree()
 
-  gl.setSize(600, 400)
+  gl.setSize(1920, 1080)
 
-  obj.scale.set(0.01/10, 0.01/10, 0.01/10)
+  obj.scale.set(.1, .1, .1)
   obj.position.set(0, 0, 0)
   // useFrame(() => (obj.rotation.x = obj.rotation.y += 0.01))
 
   return (
     <group ref={model}>
-      <primitive object={obj} />
+      <primitive object={obj}/>
     </group>
   )
 

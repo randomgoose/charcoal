@@ -47,8 +47,8 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Link to="/">Home</Link>
-        <Link to="/profile">Profile</Link> */}
+      <Link to="/">Home</Link>
+        <Link to="/profile">Profile</Link>
       <main>
         
         {/* <Article /> */} 
@@ -68,15 +68,15 @@ function App() {
           <Graph id={0} />
           </Suspense> */}
         {/* </ModelViewer> */}
-        {/* <Switch>
+        <Switch>
           <Route exact path="/">
             <Demo />
-            <SlotPanel />
+            <SlotPanel clickable={false}/>
           </Route>
           <Route path="/profile">
             <Profile />
           </Route>
-        </Switch> */}
+        </Switch>
           
           {/* <ModelViewer>
             <Suspense fallback={null}>
@@ -84,11 +84,11 @@ function App() {
             </Suspense> 
           </ModelViewer> */}
           {/* <Header /> */}
-          <ModelViewer>
+          {/* <ModelViewer>
             <Suspense fallback={null}>
               <Model />
             </Suspense>
-          </ModelViewer>
+          </ModelViewer> */}
       </main>
     </div>
   );

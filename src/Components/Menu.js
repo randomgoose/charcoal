@@ -16,17 +16,23 @@ const Menu = (props) => {
         
         const menu = useRef(null)
 
-        updatePosition = (x, y) => {
+        let timer;
+
+        updatePosition = (which, x, y) => {
+                clearTimeout(timer)
+
                 console.log("x", x, "y", y)
                 menu.current.style.top = y + "px";
                 menu.current.style.left = x + "px";
                 menu.current.style.opacity = 1;
 
-                setTimeout(() => {
+                setWhich(which)
+
+                timer = setTimeout(() => {
                        menu.current.style.opacity = 0;
                        menu.current.style.top = -9999; 
                        menu.current.style.left = -9999; 
-                }, 5000);
+                }, 3000);
         }
 
         const disableSlot = () => {
@@ -34,7 +40,8 @@ const Menu = (props) => {
                         type: "",
                         content: ""
                 }
-                // context.setSlot(which, data)
+
+                context.setSlot(which, data)
         }
 
         return (

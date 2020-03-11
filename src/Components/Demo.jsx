@@ -1,4 +1,4 @@
-import React, { useState, Suspense, useEffect, useRef } from 'react'
+import React, { useState, Suspense, useEffect } from 'react'
 import './Demo.scss'
 import Highlight from 'react-highlighter'
 import data from "./NewsData"
@@ -10,12 +10,8 @@ import Poll from './Poll'
 import Slot from './Slot'
 import SlotPanel from './SlotPanel'
 import Card from './Card'
-import { useFrame } from 'react-three-fiber'
-import * as THREE from 'three'
 
 const Demo = (props) => {
-
-    const group = useRef(null)
 
     const [search, setSearch] = useState("ipsam")
     const [x, setX] = useState(100)
@@ -36,10 +32,6 @@ const Demo = (props) => {
             </Highlight>
         </p>
     ))
-
-    // useFrame(state => {
-    //     // console.dir(group.current)
-    // })
 
     return(
         <>
@@ -70,14 +62,8 @@ const Demo = (props) => {
             type: "highlight",
             content: search
         }}>
-                    <group ref={group}>
-                        <mesh position={[0, 0, 0]}>
-                            <boxBufferGeometry attach="geometry" args={[.1, .1, .1]}></boxBufferGeometry>
-                        </mesh>
-                        <ThreeText>"</ThreeText> 
                         <ThreeText>{search.length <= 35 ? search : search.slice(0, 35) + "..."}</ThreeText>
                         <Card />
-                    </group>
         </ARComponent>
 
 

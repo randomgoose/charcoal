@@ -9,7 +9,9 @@ function Model(props) {
   const obj = useLoader(GLTFLoader, object)
 
   return (
+    <group>
       <primitive object = {obj.scene} dispose = {null} />
+    </group>
   )
 
 }
