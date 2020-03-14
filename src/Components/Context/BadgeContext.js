@@ -14,15 +14,29 @@ class BadgeContextProvider extends React.Component {
                 }
         }
 
-
-        updatePosition = (x, y) => {
+        updatePosition = (x, y, width, height) => {
                 this.setState({
                         x, y
                 }, () => {
-                        console.log(x, y)
-                        document.getElementsByClassName("SlotPanel")[0].style.left = x - 200 + "px"
-                        document.getElementsByClassName("SlotPanel")[0].style.top = y - 200 + "px"
-                        document.getElementsByClassName("SlotPanel")[0].style.opacity = "1";
+                        if ((x + width) >= window.innerWidth / 2) {
+                                if ( (y + height) >= window.innerHeight /2 ) {
+                                        document.getElementsByClassName("SlotPanel")[0].style.left = x - 200 + "px"
+                                        document.getElementsByClassName("SlotPanel")[0].style.top = y - 200 + "px"       
+                                } else {
+                                        document.getElementsByClassName("SlotPanel")[0].style.left = x - 200 + "px"
+                                        document.getElementsByClassName("SlotPanel")[0].style.top = y + height - 100 + "px"
+                                }
+                        } else {
+                                if ( (y + height) >= window.innerHeight /2 ) {
+                                        document.getElementsByClassName("SlotPanel")[0].style.left = x + width - 100 + "px"
+                                        document.getElementsByClassName("SlotPanel")[0].style.top = y - 200 + "px" 
+                                } else {
+                                        document.getElementsByClassName("SlotPanel")[0].style.left = x + width - 100 + "px"
+                                        document.getElementsByClassName("SlotPanel")[0].style.top = y + height - 100 + "px"
+                                }
+                        }
+
+                        document.getElementsByClassName("SlotPanel")[0].style.opacity = "1"; 
                 })
                 console.log(this.state.position)
         }

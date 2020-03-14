@@ -1,0 +1,29 @@
+section {
+        @include gel-layout;
+}
+
+.Home h3 {
+        text-align: center;
+}
+
+
+.main__row {
+        @include gel-layout;
+}
+
+.main__spacing {
+        @include gel-layout-item;
+        @include gel-columns(1/4);
+}
+
+.main__content {
+        @include gel-layout-item;
+        @include gel-columns(2/4);
+        margin: 0 auto;
+}
+
+// .Row {
+//         @include gel-layout-item;
+//         @include gel-columns(1/3);
+//         margin: 0 auto;
+// }

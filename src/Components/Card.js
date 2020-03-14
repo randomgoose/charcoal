@@ -3,7 +3,6 @@ import * as THREE from 'three'
 import { useLoader, useThree } from 'react-three-fiber'
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader'
 import Model from './Model'
-import env from './env.hdr'
 
 function Card() {
 
@@ -11,7 +10,7 @@ function Card() {
         const back = useRef(null)
         const background = useRef(null)
 
-        const rgbe = useLoader(RGBELoader, env)
+        // const rgbe = useLoader(RGBELoader, env)
 
 
         return(

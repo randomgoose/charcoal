@@ -5,7 +5,6 @@ import ModelViewer from './Components/ModelViewer'
 import Box from './Components/Box'
 import ThreeText from './Components/ThreeText'
 import Model from './Components/Model'
-import './App.scss';
 import { BoxGeometry } from 'three';
 import Slot from './Components/Slot';
 import ARComponent from './Components/ARComponent';
@@ -16,6 +15,9 @@ import Demo from './Components/Demo';
 import { Switch, Route, Link } from 'react-router-dom'
 import Profile from './Components/Pages/Profile'
 import Male from './Components/Male'
+import Home from './Components/Pages/Home'
+import NavBar from './Components/NavBar'
+require('./stylesheets/main.scss')
  
 function App() {
 
@@ -47,8 +49,7 @@ function App() {
 
   return (
     <div className="App">
-      <Link to="/">Home</Link>
-        <Link to="/profile">Profile</Link>
+      <NavBar />
       <main>
         
         {/* <Article /> */} 
@@ -68,13 +69,18 @@ function App() {
           <Graph id={0} />
           </Suspense> */}
         {/* </ModelViewer> */}
+
         <Switch>
           <Route exact path="/">
-            <Demo />
-            <SlotPanel clickable={false}/>
+            {/* <Demo /> */}
+            <Home />
           </Route>
           <Route path="/profile">
             <Profile />
+          </Route>
+          <Route path="/story/:storyID">
+            <Demo />
+            <SlotPanel clickable={false}/>
           </Route>
         </Switch>
           

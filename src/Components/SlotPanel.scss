@@ -10,8 +10,10 @@
     transition: opacity 0.2s;
 }
 
-.Profile > .SlotPanel {
+.Profile .SlotPanel {
     // top: 50%;
+    top: 0;
+    left: 0;
     // height: 50%;
     position: absolute;
 }

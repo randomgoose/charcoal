@@ -1,5 +1,6 @@
 import React, { useState, Suspense, useEffect } from 'react'
-import './Demo.scss'
+import { useParams } from 'react-router-dom'
+// import './Demo.scss'
 import Highlight from 'react-highlighter'
 import data from "./NewsData"
 import ARComponent from './ARComponent'
@@ -12,12 +13,15 @@ import SlotPanel from './SlotPanel'
 import Card from './Card'
 
 const Demo = (props) => {
+    const storyId = useParams()
+
+    console.log(storyId)
 
     const [search, setSearch] = useState("ipsam")
-    const [x, setX] = useState(100)
-    const [y, setY] = useState(100)
+    const [x, setX] = useState(-9999)
+    const [y, setY] = useState(-9999)
 
-    const set = (e) => {
+    const setHighlight = (e) => {
         setSearch(
             window.getSelection().toString()
         )
@@ -26,8 +30,8 @@ const Demo = (props) => {
     };
 
     const content = data[0].content.split("\n").map( item => (
-        <p>
-            <Highlight onMouseUp={set} key={Math.random()} search={search}>
+        <p Article__body className="gel-layout">
+            <Highlight onMouseUp={setHighlight} key={Math.random()} search={search}>
                 {item}
             </Highlight>
         </p>
@@ -37,23 +41,14 @@ const Demo = (props) => {
         <>
         <div className="Article__layout">
             <div className="Article__spacing"></div>
-                <div className="Article__title gel-layout--middle">The animals that will survive climate change</div>
+                <div className="Article__main">
+                    <div className="Article__title gel-layout--middle">The animals that will survive climate change</div>
+                    <div className="Article__intro">With one in every four species facing extinction, which animals are the best equipped to survive the climate crisis? (Spoiler alert: it’s probably not humans).</div>
+                    <div className="Article__body">
+                        { content }
+                    </div> 
+                </div>
             <div className="Article__spacing"></div>
-        </div>
-
-        <div className="Article__layout">
-            <div className="Article__spacing"></div>
-                <div className="Article__intro">With one in every four species facing extinction, which animals are the best equipped to survive the climate crisis? (Spoiler alert: it’s probably not humans).</div>
-            <div className="Article__spacing"></div>
-        </div>
-        
-        <div className="Article__layout">
-            <div className="Article__spacing"></div>
-            <div className="Article__body">
-                { content }
-            </div>
-            <div className="Article__spacing"></div>
-            {/* <div className="Article__paragraph">t</div> */}
         </div>
 
         <Poll id={0}></Poll>

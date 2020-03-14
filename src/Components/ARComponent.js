@@ -122,13 +122,16 @@ function ARComponent(props) {
                 document.getElementsByTagName('body')[0].appendChild(clone);
                 // document.getElementsByTagName('body')[0].appendChild(clone);
 
+                clone.style.top = e.clientY + "px";
+                clone.style.left = e.clientX + "px";
+
                 let client = component.current.getBoundingClientRect()
-                // console.log(client)
-                context.updatePosition(client.x, client.y) 
-                
-                document.getElementsByClassName("clone")[0].style.width = "5rem";
-                document.getElementsByClassName("clone")[0].style.height = "5rem";
-                component.current.style.opacity = "0";
+                // if (client.x <= window.width)
+
+                context.updatePosition(client.x, client.y, client.width, client.height)
+                document.getElementsByClassName("clone")[0].style.width = "5rem"
+                document.getElementsByClassName("clone")[0].style.height = "5rem"
+                component.current.style.opacity = "0.1";
         } 
         
 

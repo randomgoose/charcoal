@@ -1,0 +1,45 @@
+
+.ModelViewer {
+    position: relative;
+    margin: 0 auto;
+    height: 300px;
+    width: 400px;
+
+    &__title {
+        font-family: "ReithSans";
+        font-weight: bold;
+        letter-spacing: normal;
+        transform: translateX(40px);
+        background-color: white;
+        text-transform: uppercase;
+    }
+
+    &__iconBox {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        padding: 16px;
+        z-index: 10;
+        background-color: white;
+        top: 0px;
+        left: -20px;
+        box-shadow: 0 10px 20px rgba(black, 0.3);
+
+        animation: appear .5s ease;
+    }
+
+    & canvas {
+        background-color: #333;
+
+        
+    }
+    
+    /* height: 1080px; */
+    /* width: 1920px; */
+}
+
+.Profile > .ModelViewer {
+    position: absolute;
+    height: 1920px;
+    width: 1080px;
+}
