@@ -26,24 +26,25 @@
         transition: all 0.5s ease;
         transition-property: width, height;
         box-shadow: 0 5px 20px rgba(#000, 0.5);
+        z-index: 999;
 }
 
 .clone.model {
-    background-image: url('../Model.svg');
+    background-image: url('../../Images/Icons/icon__model.svg');
     background-size: 2rem;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .clone.poll {
-    background-image: url('../Graph.svg');
+    background-image: url('../../Images/Icons/icon__graph.svg');
     background-size: 2rem;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .clone.highlight {
-    background-image: url('../Highlight.svg');
+    background-image: url('../../Images/Icons/icon__highlight.svg');
     background-size: 2rem;
     background-repeat: no-repeat;
     background-position: center;

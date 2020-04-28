@@ -1,12 +1,11 @@
 import React from 'react'
 import Story from '../Story'
+import NavBar from '../NavBar'
 
 const Home = (props) => {
         return(
                 <div className="Home">
-                        <header>
-                                <nav></nav>
-                        </header>
+                        <NavBar />
 
                         <main>
                                 <section className="Home__main">

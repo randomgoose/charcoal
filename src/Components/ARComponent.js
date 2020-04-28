@@ -2,7 +2,6 @@ import React, {useRef, useState, useEffect, Suspense, useContext} from 'react'
 import Draggable, { DraggableCore } from  'react-draggable'
 import ModelViewer from './ModelViewer'
 import Box from './Box'
-import './ARComponent.scss'
 import { BadgeContext } from './Context/BadgeContext'
 
 function ARComponent(props) {
@@ -21,13 +20,16 @@ function ARComponent(props) {
         let draggable = useRef(null);
         let clone = useRef(null);
 
+        let timer = null;
+
         useEffect(() => {
                 Slots = Array.from(document.getElementsByClassName('Slot'))
         })
 
         useEffect(() => {
                 setPosition({x: props.x, y: props.y})
-        }, [props.x, props.y])
+                clearTimeout(timer)
+        }, [props.x, props.y, timer])
 
         useEffect(() => {
                 setData(props.data)
@@ -75,6 +77,7 @@ function ARComponent(props) {
               };
         
         const onStop = (e, position) => {
+
                 // let componentClientRect = e.target.getBoundingClientRect()
                 let componentClientRect = document.getElementsByClassName("clone")[0].getBoundingClientRect()
                 // console.log(componentClientRect)
@@ -104,19 +107,26 @@ function ARComponent(props) {
                         //      component.current.style.opacity = 0;
                         //      slot.setAttribute("class", slot.getAttribute('class').split(" ")[0] + " " + slot.getAttribute('class').split(" ")[1] + " " + props.data.type)
                      } else {
-                        document.getElementsByClassName("SlotPanel")[0].style.opacity = "0";
+                        // alert("o")
+                        // document.getElementsByClassName("SlotPanel")[0].style.opacity = "0"
                      }
                 });
 
                 component.current.style.opacity = "1"; 
                 document.getElementsByTagName("body")[0].removeChild(document.getElementsByClassName("clone")[0])
 
-                context.updatePosition(-9999, -9999) 
+                context.updatePosition(-9999, -9999)
+                setPosition({x: -9999, y: -9999})
+                timer = setTimeout(() => {
+                        document.getElementsByClassName("SlotPanel")[0].style.opacity = "0"
+                }, 1000)
+        // document.getElementsByClassName("SlotPanel")[0].style.opacity = "0";
                 
                 // component.current.style.transform = "translate(0, 0)"
         }
 
         const onStart = (e) => {
+
                 let clone = document.createElement("div")
                 clone.setAttribute("class", `clone ${props.data.type}`);
                 document.getElementsByTagName('body')[0].appendChild(clone);
@@ -131,7 +141,7 @@ function ARComponent(props) {
                 context.updatePosition(client.x, client.y, client.width, client.height)
                 document.getElementsByClassName("clone")[0].style.width = "5rem"
                 document.getElementsByClassName("clone")[0].style.height = "5rem"
-                component.current.style.opacity = "0.1";
+                component.current.style.opacity = "0";
         } 
         
 

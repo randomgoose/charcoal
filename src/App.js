@@ -49,8 +49,6 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
-      <main>
         
         {/* <Article /> */} 
         {/* <Sample /> */}
@@ -95,7 +93,6 @@ function App() {
               <Model />
             </Suspense>
           </ModelViewer> */}
-      </main>
     </div>
   );
 }

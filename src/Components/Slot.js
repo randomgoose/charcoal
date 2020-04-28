@@ -1,6 +1,5 @@
 import React, {useRef, useState, useEffect, useContext} from 'react'
 import Draggable from  'react-draggable'
-import './Slot.scss'
 import { BadgeContext } from './Context/BadgeContext'
 import { Menu, updatePosition } from './Menu'
 
