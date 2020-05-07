@@ -30,7 +30,7 @@ const Demo = (props) => {
     };
 
     const content = data[0].content.split("\n").map( item => (
-        <p Article__body className="gel-layout">
+        <p  className="gel-layout">
             <Highlight onMouseUp={setHighlight} key={Math.random()} search={search}>
                 {item}
             </Highlight>
@@ -40,15 +40,14 @@ const Demo = (props) => {
     return(
         <>
         <div className="Article__layout">
-            <div className="Article__spacing"></div>
                 <div className="Article__main">
-                    <div className="Article__title gel-layout--middle">The animals that will survive climate change</div>
-                    <div className="Article__intro">With one in every four species facing extinction, which animals are the best equipped to survive the climate crisis? (Spoiler alert: it’s probably not humans).</div>
+                    <div className="Article__title">The animals that will survive climate change</div>
+                    <div className="Article__date">24th January 2020</div>
+                    <div className="Article__author">By Amos Zeeberg</div>
                     <div className="Article__body">
                         { content }
                     </div> 
                 </div>
-            <div className="Article__spacing"></div>
         </div>
 
         <Poll id={0}></Poll>

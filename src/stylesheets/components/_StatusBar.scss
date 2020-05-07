@@ -85,6 +85,7 @@
     width: 100%;
     position: fixed;
     background: red;
+    z-index: 10;
 
     &__system {
       height: 4.4rem;

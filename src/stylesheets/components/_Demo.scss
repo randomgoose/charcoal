@@ -1,28 +1,34 @@
-body {
-}
 
 .Article__title {
+    font-size: 1.8rem;
+    height: 4.4rem;
+    color: $color-black;
     // @include gel-typography('canon-bold');
 }
 
-.Article__main {
-    // @include gel-layout-item;
-    // @include gel-columns(1/3);
-    // @include gel-typography('great-primer');
+.Article__date {
+    color: $color-grey-1;
+    height: 2rem;
+    font-size: 1.4rem;
+    margin-top: .8rem;
+}
+
+.Article__author {
+    height: 2rem;
+    font-size: 1.4rem;
+    margin-top: .6rem;
 }
 
 .Article__layout {
+    margin: 1.5rem;
+    font-family: sans-serif;
     // @include gel-layout;
-    
+
     // background-color: red;
 }
 
-.Article__spacing {
-    // @include gel-layout-item;
-    // @include gel-columns(1/3);
-}
-
 .Article__body {
+    font-size: 1.4rem;
 
     & > p {
         margin-top: 20px;
