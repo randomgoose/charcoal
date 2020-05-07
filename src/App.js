@@ -16,7 +16,7 @@ import { Switch, Route, Link } from 'react-router-dom'
 import Profile from './Components/Pages/Profile'
 import Male from './Components/Male'
 import Home from './Components/Pages/Home'
-import NavBar from './Components/NavBar'
+import StatusBar from './Components/Layout/StatusBar'
 require('./stylesheets/main.scss')
  
 function App() {

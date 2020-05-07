@@ -2,6 +2,21 @@ section {
         @include gel-layout;
 }
 
+.Home {
+        &__story-feed {
+                z-index: -1;
+                position: relative;
+                //position: fixed;
+                top: 80px;
+                //background-color: red;
+                display: flex;
+                overflow: scroll;
+                flex-direction: column;
+                margin: 0 auto;
+                align-items: center;
+        }
+}
+
 .Home h3 {
         text-align: center;
 }

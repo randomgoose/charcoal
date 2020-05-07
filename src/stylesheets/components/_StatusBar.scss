@@ -1,0 +1,80 @@
+.StatusBar {
+    margin: 0 auto;
+    width: 100%;
+    height: 40px;
+    white-space: nowrap;
+    text-align: center;
+    border: .02px solid rgba(grey, 0.3);
+    position: relative;
+    background: $color-white;
+
+    &__navigation {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+
+        & a {
+
+            &:link, &:visited {
+                // width: fit-content;
+                // line-height: 20px;
+                width: 6%;
+                height: 100%;
+                position: relative;
+                color: #333;
+                text-decoration: none;
+                padding: 10px;
+                border-left: 1px solid rgba(grey, 0.3);
+                display: inline-block;
+            }
+
+            &:hover::after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 6px;
+                background-color: red;
+            }
+
+            &:last-child {
+                border-right: 1px solid rgba(grey, 0.3);
+            }
+        }
+
+
+    }
+
+    @media only screen and (max-width: 600px) {
+        position: fixed;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        &__logoBox {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__logo {
+            //width: 20%;
+            height: 75%;
+            width: auto;
+            display: inline-block;
+            transform: scale(2);
+        }
+
+        &__appName {
+            display: inline-block;
+            line-height: 40px;
+            font-size: 18px;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+    }
+}

@@ -9,12 +9,12 @@ const Story = (props) => {
         (<div className="Story__headline">
                 <div className="Story__category">{storyData.category}</div>
                 <div className="Story__intro">{storyData.intro}</div>
-                <div className="Story__author">{"By " + storyData.author}</div>
+                <div className="Story__date">{storyData.date}</div>
         </div>) : (
                 <>
                 <div className="Story__category">{storyData.category}</div>
                 <div className="Story__intro">{storyData.intro}</div>
-                <div className="Story__author">{"By " + storyData.author}</div>
+                <div className="Story__date">{storyData.date}</div>
                 </>
         )
 
