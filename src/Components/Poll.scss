@@ -1,17 +1,3 @@
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-body {
-    box-sizing: border-box;
-    padding: 3rem;
-}
-
-
 .Poll__card{
 	text-align: center;
 	margin: 0 auto;
@@ -96,31 +82,31 @@ body {
         font-weight: bold;
 }
 
-button {
-        margin: 20px auto;
-        background-color: darken(#75daad, 20%);
-        width: 200px;
-        height: 40px;
-        border-radius: 100px;
-        border: none;
-        color: white;
-        font-size: 16px;
-        transition: all 0.2s;
-        box-shadow: 1px 0 10px rgba(0, 0, 0, .1);
-        
-        &:hover {
-                transform: translateY(-2px);
-                box-shadow: 1px 5px 20px rgba(0, 0, 0, .2);
-        }
-
-        &:active{
-                transform: translateY(-1px);
-        }
-
-        &:focus {
-                outline: none;
-        }
-}
+//button {
+//        margin: 20px auto;
+//        background-color: darken(#75daad, 20%);
+//        width: 200px;
+//        height: 40px;
+//        border-radius: 100px;
+//        border: none;
+//        color: white;
+//        font-size: 16px;
+//        transition: all 0.2s;
+//        box-shadow: 1px 0 10px rgba(0, 0, 0, .1);
+//
+//        &:hover {
+//                transform: translateY(-2px);
+//                box-shadow: 1px 5px 20px rgba(0, 0, 0, .2);
+//        }
+//
+//        &:active{
+//                transform: translateY(-1px);
+//        }
+//
+//        &:focus {
+//                outline: none;
+//        }
+//}
 
 .result::before {
 	background-color: #75daad;

@@ -2,25 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f9bcc7d-66be-4312-96c9-c53c6373b551" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Layout/NavBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Layout/StatusBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Layout/TabBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stylesheets/components/_StatusBar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stylesheets/components/_TabBar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/NavBar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Layout/StatusBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layout/StatusBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Poll.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Poll.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Story.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Data/StoryData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/StoryData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stylesheets/abstracts/_Variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/abstracts/_Variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/base/_Base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/base/_Base.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stylesheets/components/_NavBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/components/_NavBar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/components/_StatusBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/components/_StatusBar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stylesheets/components/_Story.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/components/_Story.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stylesheets/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/components/_TabBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/components/_TabBar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stylesheets/pages/_Home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/pages/_Home.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +99,7 @@
       <updated>1583030240187</updated>
       <workItem from="1583030242551" duration="2025000" />
       <workItem from="1583340447395" duration="110000" />
-      <workItem from="1588718530859" duration="18431000" />
+      <workItem from="1588718530859" duration="25607000" />
     </task>
     <servers />
   </component>
@@ -138,9 +131,9 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="616" y="280" key="run.anything.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1588869065229" />
-    <state x="623" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1588869867962">
+    <state x="623" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1588888404085">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state x="623" y="265" width="672" height="678" key="search.everywhere.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1588869867962" />
+    <state x="623" y="265" width="672" height="678" key="search.everywhere.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1588888404085" />
   </component>
 </project>

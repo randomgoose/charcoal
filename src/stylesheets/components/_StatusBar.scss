@@ -80,21 +80,93 @@
 // }
 
 @media(max-width: 375px) {
-    .StatusBar {
-        height: 14rem;
-        width: 100%;
-        background-color: red;
-        position: fixed;
-        &__system {
-            height: 4.4rem;
-            width: 100%;
-            // background: red;
-            position: fixed;
-            z-index: 999;
-        }
+  .StatusBar {
+    height: 14rem;
+    width: 100%;
+    position: fixed;
+    background: red;
 
-        &__logoBox {
-            
-        }
+    &__system {
+      height: 4.4rem;
+      width: 100%;
+      background: white;
+      position: fixed;
+      //top: 2rem;
     }
+
+    &__app {
+      width: 100%;
+      height: 4.4rem;
+      position: fixed;
+      top: 4.4rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background: white;
+    }
+
+    &__logoBox {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__logo {
+      width: 25%;
+      height: auto;
+    }
+
+    &__appName {
+      text-transform: uppercase;
+      font-family: sans-serif;
+      margin-left: .5rem;
+      font-size: 2.25rem;
+    }
+
+    &__button {
+      height: 4.4rem;
+      border: none;
+      background: none;
+
+      &.bookmark {
+        margin-left: 1rem;
+      }
+
+      &.setting {
+        margin-right: 1rem;
+      }
+    }
+
+    &__searchBox {
+      width: 100%;
+      height: 5.2rem;
+      background: white;
+      position: fixed;
+      top: 8.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__search {
+      border: none;
+      background: rgba($color-grey-5, .1);
+      height: 3.6rem;
+      width: 34.3rem;
+      border-radius: 1rem;
+      margin: 0 auto;
+      color: $color-grey-5;
+      padding: 0 3.2rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__search-icon {
+      position: absolute;
+      left: 3rem;
+    }
+  }
 }
