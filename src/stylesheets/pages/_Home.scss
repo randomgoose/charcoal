@@ -1,5 +1,5 @@
 section {
-        @include gel-layout;
+        // @include gel-layout;
 }
 
 .Home {
@@ -23,17 +23,17 @@ section {
 
 
 .main__row {
-        @include gel-layout;
+        // @include gel-layout;
 }
 
 .main__spacing {
-        @include gel-layout-item;
-        @include gel-columns(1/4);
+        // @include gel-layout-item;
+        // @include gel-columns(1/4);
 }
 
 .main__content {
-        @include gel-layout-item;
-        @include gel-columns(2/4);
+        // @include gel-layout-item;
+        // @include gel-columns(2/4);
         margin: 0 auto;
 }
 

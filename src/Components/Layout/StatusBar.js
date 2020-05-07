@@ -5,7 +5,8 @@ const StatusBar = (props) => {
         return (
                 <header className="StatusBar">
 
-
+                        <div className="StatusBar__system">
+                        </div>
                         <div className="StatusBar__logoBox">
                                 <img className="StatusBar__logo" src={require("../../Images/Branding/bbc.svg")} alt="logo"></img>
                             <span className={"StatusBar__appName"}>Future</span>

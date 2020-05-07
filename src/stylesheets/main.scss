@@ -1,11 +1,7 @@
-@import 'node_modules/gel-sass-tools/sass-tools';
-@import 'node_modules/sass-mq/mq';
+@import './base/Base';
 @import './abstracts/Variables';
 
-@import 'node_modules/gel-grid/grid';
-@import 'node_modules/gel-typography/typography';
 
-@import './base/Base';
 @import './components/Demo';
 @import './components/Story';
 @import './components/ModelViewer';
@@ -19,13 +15,3 @@
 @import './pages/Home';
 
 @import './animations/animation.scss';
-
-@font-face {
-        font-family: 'ReithSans';
-        src: url(../fonts/BBCReithSans_W_Rg.woff2),
-            url(../fonts/BBCReithSans_W_Bd.woff2),
-            url(../fonts/BBCReithSans_W_Md.woff2),
-            url(../fonts/BBCReithSans_W_It.woff2),
-            url(../fonts/BBCReithSans_W_ExBd.woff2)
-    }
- 
