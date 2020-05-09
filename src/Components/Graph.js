@@ -61,9 +61,6 @@ function Graph(props) {
                 camera
         } = useThree()
 
-        useFrame(state => {
-                console.log(group.current.rotation.y += 0.01)
-        })
 
         useEffect(() => {
                 camera.position.set(20, 20, 20);

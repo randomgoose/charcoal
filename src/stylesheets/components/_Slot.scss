@@ -1,41 +1,14 @@
 .Slot {
-    width: 5rem;
-    height: 5rem;
-    position: absolute;
-    // transition: all 0.1s;
-    background-color: white;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    border: 3px solid #75daad;
-    border-radius: 6px;
+    width: 4rem;
+    height: 4rem;
+    background-color: #e4e4e4;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    // vertical-align: center;
     cursor: pointer;
-}
-
-.Slot.top{
-    left: 50%;
-    transform: translate(-50%, 0) scale(1);
-}
-
-.Slot.bottom{
-    left: 50%;
-    top: 100%;
-    transform: translate(-50%, -100%) scale(1);
-}
-
-.Slot.left{
-    top: 50%;
-    transform: translate(0, -50%) scale(1);
-}
-
-.Slot.right{
-    left: 100%;
-    top: 50%;
-    transform: translate(-100%, -50%) scale(1);
-}
-
-.Slot.bottom{
-    left: 50%;
-    top: 100%;
-    transform: translate(-50%, -100%);
 }
 
 

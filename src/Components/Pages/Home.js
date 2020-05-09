@@ -7,7 +7,7 @@ import NavBar from "../Layout/NavBar";
 const Home = (props) => {
     return (
         <div className="Home">
-            <StatusBar/>
+            <StatusBar searchBox={true} />
             <NavBar/>
             <TabBar/>
 

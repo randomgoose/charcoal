@@ -7,10 +7,12 @@
 @import './components/ModelViewer';
 @import './components/ARComponent';
 @import './components/Slot';
+@import './components/SlotPanel';
 
-@import 'components/StatusBar';
-@import 'components/TabBar';
-@import 'components/NavBar';
+@import './components/StatusBar';
+@import './components/TabBar';
+@import './components/NavBar';
+@import './components//Poll';
 
 @import './pages/Home';
 

@@ -22,6 +22,7 @@ const Slot = (props) => {
                     updatePosition(props.position, e.target.getBoundingClientRect().right, e.target.getBoundingClientRect().bottom)
                 } : e => {}}
             > 
+            { props.children }
             </div>
         )
 }

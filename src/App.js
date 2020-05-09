@@ -25,6 +25,7 @@ function App() {
   let [bottomSlot, setBottomSlot] = useState("")
   let [leftSlot, setLeftSlot] = useState("")
   let [rightSlot, setRightSlot] = useState("")
+  let [focusedTab, setFocusedTab] = useState("Home")
 
   useEffect(() => {   
     var myHeaders = new Headers();
@@ -49,24 +50,7 @@ function App() {
 
   return (
     <div className="App">
-        
-        {/* <Article /> */} 
-        {/* <Sample /> */}
-        {/* <div id="home" style={{width: "300px", height: "300px", backgroundColor: "purple", position: "absolute", left: "600px", zIndex: "-999"}}></div> */}
-        {/* <SlotPanel /> */}
-        {/* <Article /> */}
-        {/* {/* <ARComponent content="iceberg" setBottomSlot={setBottomSlot} setLeftSlot={setLeftSlot} setRightSlot={setRightSlot} setTopSlot={setTopSlot}/> */}
-        {/* <ARComponent content="pride" setBottomSlot={setBottomSlot} setLeftSlot={setLeftSlot} setRightSlot={setRightSlot} setTopSlot={setTopSlot}/>
-        <ARComponent content="tree" setBottomSlot={setBottomSlot} setLeftSlot={setLeftSlot} setRightSlot={setRightSlot} setTopSlot={setTopSlot}/>
-        <ARComponent content="mountain" setBottomSlot={setBottomSlot} setLeftSlot={setLeftSlot} setRightSlot={setRightSlot} setTopSlot={setTopSlot}/>
-        <ARComponent content="python" setBottomSlot={setBottomSlot} setLeftSlot={setLeftSlot} setRightSlot={setRightSlot} setTopSlot={setTopSlot}/> */}
-        {/* <ModelViewer> */}
-          {/* <Article />
-          <SlotPanel /> */}
-          {/* <Suspense fallback={null}>
-          <Graph id={0} />
-          </Suspense> */}
-        {/* </ModelViewer> */}
+      
 
         <Switch>
           <Route exact path="/">

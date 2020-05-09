@@ -1,6 +1,5 @@
 import React, {useState, Suspense} from 'react'
 import data from './PollData'
-import './Poll.scss'
 import Graph from './Graph'
 import ModelViewer from './ModelViewer';
 import Draggable from 'react-draggable';
@@ -29,7 +28,7 @@ function Poll(props) {
                 <div className="Poll__card">
                         <h3 className="Poll__title">{question[0].title}</h3>
                         {options}
-                        <button onClick={() => setAnswered(true)}>Submit</button>
+                        <button className="Poll__submission" onClick={() => setAnswered(true)}>Submit</button>
                 </div>
         )
 }

@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react'
 import Slot from './Slot'
 import Badge from './Badge'
-import './SlotPanel.scss'
 import { BadgeContext } from './Context/BadgeContext'
-import { Menu } from './Menu'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFont, faImage, faCube, faChartBar } from '@fortawesome/free-solid-svg-icons'
 
 const SlotPanel = React.forwardRef((props, ref) => {
 
@@ -15,12 +15,24 @@ const SlotPanel = React.forwardRef((props, ref) => {
 
     return (
         <div className="SlotPanel" ref={ref}>
-            <Badge />
-            <Slot clickable={props.clickable} position="top"></Slot>
-            <Slot clickable={props.clickable} position="bottom"></Slot>
-            <Slot clickable={props.clickable} position="left"></Slot>
-            <Slot clickable={props.clickable} position="right"></Slot>
-        </div>  
+            {/* <Badge /> */}
+            <Slot clickable={props.clickable} position="top">
+                <FontAwesomeIcon icon={faFont}
+                    size={"lg"} />
+            </Slot>
+            <Slot clickable={props.clickable} position="bottom">
+                <FontAwesomeIcon icon={faImage}
+                        size={"lg"} />
+            </Slot>
+            <Slot clickable={props.clickable} position="left">
+                <FontAwesomeIcon icon={faCube}
+                        size={"lg"} />
+            </Slot>
+            <Slot clickable={props.clickable} position="right">
+                <FontAwesomeIcon icon={faChartBar}
+                        size={"lg"} />
+            </Slot>
+        </div>
     )
 
 })

@@ -19,12 +19,41 @@
     margin-top: .6rem;
 }
 
-.Article__layout {
+.Article__main {
+    // position: relative;
+    top: 8.8rem;
     margin: 1.5rem;
     font-family: sans-serif;
-    // @include gel-layout;
+}
 
-    // background-color: red;
+.Article__category {
+    width: 100%;
+    display: inline-block;
+    background: $color-black;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.4rem;
+    color: $color-white;
+    font-family: sans-serif;
+    padding-left: 1.4rem;
+    position: relative;
+    top: -2.3rem;
+    // z-index: 10;
+    // position: absolute;
+    // top: 10rem;
+    // z-index: 1000;
+}
+
+.Article__image-box {
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+
+.Article__image {
+    width: 37.5rem;
+    height: 22.7rem;
+    margin: 0;
 }
 
 .Article__body {
@@ -35,3 +64,8 @@
     }
     // background-color: yellow;
 }   
+
+.Article__layout {
+    position: relative;
+    top: 8.8rem;
+}
