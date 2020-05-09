@@ -8,8 +8,8 @@ const Slot = (props) => {
 
         let context = useContext(BadgeContext)
 
-        const updateContent = () => {
-                
+        const removeContent = () => {
+                slot.current.classList.remove('poll')
         }
 
         return (
@@ -18,9 +18,9 @@ const Slot = (props) => {
                 className={`Slot ${props.position} ${context.slots[props.position].type}`}
                 ref={slot}
                 onMouseEnter={ e => {console.log(context.slots[props.position])}}
-                onClick={props.clickable === true ? e=> {
-                    updatePosition(props.position, e.target.getBoundingClientRect().right, e.target.getBoundingClientRect().bottom)
-                } : e => {}}
+                onClick={
+                    removeContent
+                }
             > 
             { props.children }
             </div>

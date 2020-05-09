@@ -1,23 +1,25 @@
-import * as THREE from 'three'
+// import * as THREE from 'three'
 import React, { Suspense, useState, useEffect } from 'react';
-import Article from './Components/Article'
-import ModelViewer from './Components/ModelViewer'
-import Box from './Components/Box'
-import ThreeText from './Components/ThreeText'
-import Model from './Components/Model'
-import { BoxGeometry } from 'three';
-import Slot from './Components/Slot';
-import ARComponent from './Components/ARComponent';
+// import Article from './Components/Article'
+// import ModelViewer from './Components/ModelViewer'
+// import Box from './Components/Box'
+// import ThreeText from './Components/ThreeText'
+// import Model from './Components/Model'
+// import { BoxGeometry } from 'three';
+// import Slot from './Components/Slot';
+// import ARComponent from './Components/ARComponent';
 import SlotPanel from './Components/SlotPanel';
-import Graph from './Components/Graph'
-import { Dom, Canvas } from 'react-three-fiber'
+import TabBar from "./Components/Layout/TabBar";
+// import Graph from './Components/Graph'
+// import { Dom, Canvas } from 'react-three-fiber'
 import Demo from './Components/Demo';
 import { Switch, Route, Link } from 'react-router-dom'
 import Profile from './Components/Pages/Profile'
-import Male from './Components/Male'
+// import Male from './Components/Male'
 import Home from './Components/Pages/Home'
-import StatusBar from './Components/Layout/StatusBar'
+// import StatusBar from './Components/Layout/StatusBar'
 require('./stylesheets/main.scss')
+
  
 function App() {
 
@@ -50,11 +52,10 @@ function App() {
 
   return (
     <div className="App">
-      
+      <TabBar/>
 
         <Switch>
           <Route exact path="/">
-            {/* <Demo /> */}
             <Home />
           </Route>
           <Route path="/profile">

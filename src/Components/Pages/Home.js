@@ -7,9 +7,9 @@ import NavBar from "../Layout/NavBar";
 const Home = (props) => {
     return (
         <div className="Home">
-            <StatusBar searchBox={true} />
+            <StatusBar searchBox={true} leftIcon={"bookmark"} rightIcon={"setting"}/>
             <NavBar/>
-            <TabBar/>
+
 
             <div className={"Home__story-feed"}>
                 <Story id={1}/>

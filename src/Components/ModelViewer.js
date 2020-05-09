@@ -7,13 +7,6 @@ function ModelViewer(props) {
     
     return ( 
             <div ref={modelViewer} className="ModelViewer">
-
-            <div className="ModelViewer__title">Title</div>
-
-            <div className="ModelViewer__iconBox">
-                <img className="ModelViewer__icon" src={require("../Images/Icons/icon__highlight-dark.svg")} alt="icon__environment" />
-            </div>
-
                 <Canvas orthographic={true} camera={{zoom: 300}}>
                     <ambientLight castShadow={true} />
                     <pointLight position={[10, 10, 10]} />

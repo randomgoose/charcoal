@@ -1,6 +1,13 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBookmark, faSearch, faShieldVirus, faSlidersH, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import {
+    faBookmark,
+    faSearch,
+    faShieldVirus,
+    faSlidersH,
+    faChevronLeft,
+    faRecycle
+} from '@fortawesome/free-solid-svg-icons'
 import { useHistory } from 'react-router-dom'
 
 const StatusBar = (props) => {
@@ -22,21 +29,42 @@ const StatusBar = (props) => {
     ) : null
 
     let leftIcon
+    let rightIcon
     if (props.leftIcon === 'bookmark') {
         leftIcon = (
-            <button className={"StatusBar__button bookmark"}>
+            <button className={"StatusBar__button left"}>
                 <FontAwesomeIcon icon={faBookmark} size={"lg"} />
             </button>
         )
     } else if (props.leftIcon === 'back') {
         leftIcon = (
-            <button className={"StatusBar__button bookmark"} onClick={goBack}>
+            <button className={"StatusBar__button left"} onClick={goBack}>
                 <FontAwesomeIcon icon={faChevronLeft} size={"lg"} />
             </button>
         )
     } else {
         leftIcon = (
-            <button className={"StatusBar__button bookmark"}>
+            <button className={"StatusBar__button left invisible"}>
+                <FontAwesomeIcon icon={faBookmark} size={"lg"} />
+            </button>
+        )
+    }
+
+    if (props.rightIcon === 'reset') {
+        rightIcon = (
+            <button className={"StatusBar__button right"}>
+                <FontAwesomeIcon icon={faRecycle} size={"lg"} />
+            </button>
+        )
+    } else if (props.rightIcon === 'setting') {
+        rightIcon = (
+            <button className={"StatusBar__button right"}>
+                    <FontAwesomeIcon icon={faSlidersH} size={"lg"} />
+            </button>
+        )
+    } else {
+        rightIcon = (
+            <button className={"StatusBar__button right invisible"}>
                 <FontAwesomeIcon icon={faBookmark} size={"lg"} />
             </button>
         )
@@ -49,16 +77,14 @@ const StatusBar = (props) => {
             </div>
 
             <div className={"StatusBar__app"}>
-                {leftIcon}
+                { leftIcon }
 
                 <div className="StatusBar__logoBox">
                     <img className="StatusBar__logo" src={require("../../Images/Branding/bbc.svg")} alt="logo"></img>
                     <span className={"StatusBar__appName"}>Future</span>
                 </div>
 
-                <button className={"StatusBar__button setting"}>
-                    <FontAwesomeIcon icon={faSlidersH} size={"lg"} />
-                </button>
+                { rightIcon }
             </div>
 
             {searchBox}

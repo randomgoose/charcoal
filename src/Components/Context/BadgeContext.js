@@ -55,8 +55,6 @@ class BadgeContextProvider extends React.Component {
                         "which": which,
                         "data": data
                 })
-                
-                console.log(slotData)
 
                 const headers = new Headers()
                 headers.append("Content-Type", "application/json")

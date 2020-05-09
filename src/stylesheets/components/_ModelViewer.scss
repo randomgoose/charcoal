@@ -1,12 +1,10 @@
 
 .ModelViewer {
     position: relative;
-    margin: 0 auto;
-    height: 300px;
-    width: 400px;
+    margin: 1rem;
+    height: 30rem;
 
     &__title {
-        font-family: "ReithSans";
         font-weight: bold;
         letter-spacing: normal;
         transform: translateX(40px);

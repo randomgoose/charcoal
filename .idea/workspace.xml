@@ -2,16 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f9bcc7d-66be-4312-96c9-c53c6373b551" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/stylesheets/pages/_Profile.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Demo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Demo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stylesheets/abstracts/_Variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/abstracts/_Variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Badge.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Badge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Badge.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/components/_Badge.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Context/BadgeContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Context/BadgeContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Layout/StatusBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layout/StatusBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Layout/TabBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layout/TabBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ModelViewer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ModelViewer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/Profile.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Poll.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Poll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Slot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Slot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SlotPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SlotPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/components/_ARComponent.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/components/_ARComponent.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stylesheets/components/_Demo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/components/_Demo.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stylesheets/components/_NavBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/components/_NavBar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/components/_ModelViewer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/components/_ModelViewer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/components/_Slot.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/components/_Slot.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stylesheets/components/_StatusBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/components/_StatusBar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stylesheets/components/_Story.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/components/_Story.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stylesheets/components/_TabBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/components/_TabBar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stylesheets/pages/_Home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/pages/_Home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheets/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/main.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +65,7 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Github\charcoal\src\stylesheets\components" />
+      <recent name="D:\Github\charcoal\src\stylesheets\pages" />
       <recent name="D:\Github\charcoal\src\stylesheets\Layout" />
       <recent name="D:\Github\charcoal\src\Components\Layout" />
     </key>
@@ -96,7 +109,7 @@
       <updated>1583030240187</updated>
       <workItem from="1583030242551" duration="2025000" />
       <workItem from="1583340447395" duration="110000" />
-      <workItem from="1588718530859" duration="27310000" />
+      <workItem from="1588718530859" duration="35318000" />
     </task>
     <servers />
   </component>
@@ -116,6 +129,10 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="674" y="283" key="#npm_start/0.0.1920.1200@0.0.1920.1200" timestamp="1588718684492" />
+    <state x="740" y="356" key="FileChooserDialogImpl" timestamp="1589041558680">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="740" y="356" key="FileChooserDialogImpl/0.0.1920.1200@0.0.1920.1200" timestamp="1589041558680" />
     <state x="461" y="243" key="SettingsEditor" timestamp="1583340523155">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
@@ -124,13 +141,13 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="213" y="121" width="1683" height="1179" key="dock-window-1/0.0.1920.1200@0.0.1920.1200" timestamp="1588720592520" />
-    <state x="616" y="280" key="run.anything.popup" timestamp="1588869065229">
+    <state x="616" y="280" key="run.anything.popup" timestamp="1589052285587">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state x="616" y="280" key="run.anything.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1588869065229" />
-    <state x="623" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1588890118307">
+    <state x="616" y="280" key="run.anything.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1589052285587" />
+    <state x="623" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1589052505790">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state x="623" y="265" width="672" height="678" key="search.everywhere.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1588890118307" />
+    <state x="623" y="265" width="672" height="678" key="search.everywhere.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1589052505790" />
   </component>
 </project>

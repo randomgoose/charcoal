@@ -1,7 +1,7 @@
 .ARComponent {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    width: 30rem;
+  //transform: translateX(-50%);
     // animation: appear .2s ease;
     transition: opacity 0.2s;
 }

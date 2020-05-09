@@ -1,33 +1,32 @@
-import React, { useRef, useEffect, Suspense } from 'react'
-import { Canvas } from 'react-three-fiber'
-import { Menu, updatePosition } from '../Menu'
+import React, {useRef, useEffect, Suspense} from 'react'
 import SlotPanel from '../SlotPanel'
-import ModelViewer from '../ModelViewer'
-import Model from '../Model'
+import StatusBar from "../Layout/StatusBar";
+import Badge from "../Badge";
+import { Link } from 'react-router-dom'
 
 const Profile = (props) => {
-        const slotPanel = useRef(null)
+    const slotPanel = useRef(null)
 
-        useEffect(() => {
-                slotPanel.current.style.opacity = 1;
-                slotPanel.current.style.left = "300px";
-                slotPanel.current.style.top = "300px";
-        })
+    return (
+        <>
+            <StatusBar rightIcon={"reset"}/>
+            <div className="Profile">
 
-        return(
-                <div className="Profile">
-                        <SlotPanel ref={slotPanel} clickable={true}>
-                        </SlotPanel>
-                        <Menu />
-                        <Canvas>
-                                <ambientLight castShadow={true} />
-                                <pointLight position={[10, 10, 10]} />
-                                <Suspense fallback={null}>
-                                        <Model />
-                                </Suspense>
-                        </Canvas>
+                <div className={"Profile__code"}>Badge #282020</div>
+ev
+                <div className={"Profile__Badge-group"}>
+                    <SlotPanel ref={slotPanel} clickable={true} special/>
+                    <Badge/>
                 </div>
-        )
+
+                <button className={"Poll__submission"} id={"preview"}>
+                    <Link to={"/preview"} >
+                    Preview AR
+                    </Link>
+                </button>
+            </div>
+        </>
+    )
 }
 
 export default Profile

@@ -14,7 +14,7 @@ const SlotPanel = React.forwardRef((props, ref) => {
     console.log("great", props.clickable)
 
     return (
-        <div className="SlotPanel" ref={ref}>
+        <div className="SlotPanel" ref={ref} id={props.special ? "special" : ""}>
             {/* <Badge /> */}
             <Slot clickable={props.clickable} position="top">
                 <FontAwesomeIcon icon={faFont}

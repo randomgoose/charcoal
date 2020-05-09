@@ -84,7 +84,7 @@
     height: 14rem;
     width: 100%;
     position: fixed;
-    z-index: 10;
+    z-index: 999;
 
     &__system {
       height: 4.4rem;
@@ -129,12 +129,16 @@
       border: none;
       background: none;
 
-      &.bookmark {
+      &.left {
         margin-left: 1rem;
       }
 
-      &.setting {
+      &.right {
         margin-right: 1rem;
+      }
+
+      &.invisible {
+        opacity: 0;
       }
     }
 

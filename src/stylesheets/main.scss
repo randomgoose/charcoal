@@ -12,8 +12,11 @@
 @import './components/StatusBar';
 @import './components/TabBar';
 @import './components/NavBar';
-@import './components//Poll';
+@import './components/Poll';
 
+@import './components/badge';
+
+@import './pages/Profile';
 @import './pages/Home';
 
 @import './animations/animation.scss';
