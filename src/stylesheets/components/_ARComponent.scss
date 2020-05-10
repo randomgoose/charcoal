@@ -1,9 +1,13 @@
 .ARComponent {
-    position: absolute;
-    width: 30rem;
+    //position: absolute;
+    //width: 30rem;
   //transform: translateX(-50%);
     // animation: appear .2s ease;
     transition: opacity 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .ARComponent.poll {

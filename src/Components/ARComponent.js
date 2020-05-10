@@ -154,6 +154,7 @@ function ARComponent(props) {
                                         {/* <Card /> */}
                                         </Suspense>
                                 </ModelViewer>
+                                <button className="Poll__submission" onClick={() => context.setSlot("left", {type: "poll", content: "test"})}>Add</button>
                         </div>
                 // </Draggable>
         )

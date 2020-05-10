@@ -1,5 +1,5 @@
-import React, { useState, Suspense, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import React, {useState, Suspense, useEffect} from 'react'
+import {useParams} from 'react-router-dom'
 // import './Demo.scss'
 import Highlight from 'react-highlighter'
 import data from "./NewsData"
@@ -11,6 +11,8 @@ import Poll from './Poll'
 // import Slot from './Slot'
 import SlotPanel from './SlotPanel'
 import StatusBar from './Layout/StatusBar'
+import Model from './Model'
+import ARComponent from "./ARComponent";
 // import Card from './Card'
 
 const Demo = (props) => {
@@ -40,11 +42,12 @@ const Demo = (props) => {
 
     return (
         <>
-            <StatusBar searchBox={false} leftIcon={'back'} />
-            <SlotPanel />
+            <StatusBar searchBox={false} leftIcon={'back'}/>
+            <SlotPanel/>
             <div className="Article__layout">
                 <div className="Article__image-box">
-                    <img className="Article__image" src={"https://images.pexels.com/photos/2156/sky-earth-space-working.jpg"} alt={"header_img"} />
+                    <img className="Article__image"
+                         src={"https://images.pexels.com/photos/2156/sky-earth-space-working.jpg"} alt={"header_img"}/>
                     <span className="Article__category">ROBOT</span>
                 </div>
 
@@ -54,18 +57,21 @@ const Demo = (props) => {
                     <div className="Article__author">By Amos Zeeberg</div>
                     <div className="Article__body">
                         {content}
-                            <Poll id={0} />
+                        <Poll id={0}/>
+                        <ARComponent x={x} y={y} data={{
+            type: "highlight",
+            content: search
+        } }>
+                            <Model/>
+                        </ARComponent>
                         {content}
                     </div>
                 </div>
-            </div>
-            
-            {/* <Poll id={0}></Poll>
+                < /div>
 
-        <ARComponent x={x} y={y} data={{
-            type: "highlight",
-            content: search
-        }}>
+                    {/* <Poll id={0}></Poll>
+
+        <ARComponent }>
                         <ThreeText>{search.length <= 35 ? search : search.slice(0, 35) + "..."}</ThreeText>
                         <Card />
         </ARComponent>
@@ -73,9 +79,10 @@ const Demo = (props) => {
 
         
             <Model />
-        </ARComponent> */}
-        </>
-    )
-}
+        </ARComponent> */
+                    }
+                </>
+                )
+                }
 
-export default Demo;
+                export default Demo;
